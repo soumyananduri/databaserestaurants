@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Give Review</title>
+</head>
+<body>
+    <form method="POST">
+        <select name="restaurant">
+            
+          {% for restaurant in data %}
+           
+          <option value="{{restaurant[0]}}">{{restaurant[1]}}</option> 
+          {% endfor %}
+
+        </select>
+      
+        <input type="text" name="name" placeholder="Enter Your Name"/> 
+        <br>
+        <br>
+        <label for="review">Review</label>
+        <input type="text" name="review" placeholder="Enter Your Review here"/> 
+        <br>
+        <br>
+        <label for="rate">Ratings</label>
+        <input type="text" name="rate" placeholder="Enter Your ratings"/> 
+        <input type="submit" name="Submit"/>
+    </form>
+
+    
+</body>
+</html>
